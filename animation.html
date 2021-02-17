@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Animation</title>
+      <meta charset="utf-8">
+      <link href="style_css.css" rel="stylesheet" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+      </script>
+    </head>
+    <body>
+      <div> 
+        <div id="object1"></div>
+        <br>
+        <div id="object2"></div>
+        <br>
+        <div id="object3"></div>
+        <br>
+        <div id="object4"></div>
+    </div>
+    <script>
+    
+       $(document).ready(function(){
+
+       function animation(){
+        
+          $("#object1").animate({"left" : 300}, 3000).animate({"left" : 0}, 3000);
+          $("#object2").animate({"left" : 300}, 3000).animate({"left" : 0}, 3000);
+          $("#object3").animate({"left" : 300}, 3000).animate({"left" : 0}, 3000);
+          $("#object4").animate({"left" : 300}, 3000).animate({"left" : 0}, 3000);
+        
+        };
+        animation(); 
+        
+       
+        $("#object1").click(function(){
+        $(this).animate({"height":300,"width":300},1000);
+        });
+        
+        $("#object3").mouseenter(function(){
+        $(this).css({"background-color":"pink"});
+       }).mouseleave(function(){
+        $(this).css({"background-color":"blue"});
+        });
+        });
+       
+        
+      </script>
+    
+    </body>
+  </html>
+  
+
+ 
